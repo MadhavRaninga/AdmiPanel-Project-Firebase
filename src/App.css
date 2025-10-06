@@ -1,0 +1,114 @@
+/* ====== Global ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* ====== Big Box Container ====== */
+.form-container {
+  background: rgba(25, 25, 25, 0.95);
+  padding: 50px 40px;
+  width: 500px;
+  min-height: 450px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 255, 200, 0.3);
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+  transform: translateY(20px);
+  animation: slideUp 0.8s ease forwards;
+  border: 2px solid rgba(0, 255, 200, 0.3);
+}
+
+/* ====== Heading (Optional) ====== */
+.form-container h2 {
+  color: #00ffc6;
+  font-size: 26px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ====== Inputs ====== */
+.form-container input {
+  padding: 15px;
+  font-size: 16px;
+  background: #121212;
+  color: #fff;
+  border: 2px solid #2c2c2c;
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.form-container input:focus {
+  border-color: #00ffc6;
+  box-shadow: 0 0 15px #00ffc6;
+  transform: scale(1.02);
+}
+
+/* ====== Button ====== */
+.form-container button {
+  padding: 15px;
+  font-size: 17px;
+  font-weight: bold;
+  color: #000;
+  background: linear-gradient(90deg, #00ffc6, #00bfff);
+  border: none;
+  margin-top: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-container button:hover {
+  box-shadow: 0 0 20px #00ffc6;
+  transform: translateY(0px) scale(1.03);
+}
+
+.form-container button:active {
+  transform: scale(0.98);
+}
+
+/* ====== Animation ====== */
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 600px) {
+  .form-container {
+    width: 100%;
+    /* padding: 30px 20px; */
+  }
+
+  .form-container h2 {
+    font-size: 22px;
+  }
+
+  .form-container input,
+  .form-container button {
+    font-size: 20px;
+    padding: 12px;
+  }
+}
