@@ -1,4 +1,4 @@
-/* ====== Global ====== */
+/* ===== Global ===== */
 * {
   margin: 0;
   padding: 0;
@@ -8,32 +8,28 @@
 
 body {
   background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  padding: 20px;
 }
 
-/* ====== Big Box Container ====== */
+/* ===== Admin Form Container ===== */
 .form-container {
   background: rgba(25, 25, 25, 0.95);
-  padding: 50px 40px;
-  width: 500px;
-  min-height: 450px;
+  padding: 40px 30px;
+  max-width: 500px;
+  width: 100%;
   border-radius: 20px;
   box-shadow: 0 0 30px rgba(0, 255, 200, 0.3);
   backdrop-filter: blur(12px);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 20px;
   text-align: center;
-  transform: translateY(20px);
-  animation: slideUp 0.8s ease forwards;
+  margin: 20px auto;
   border: 2px solid rgba(0, 255, 200, 0.3);
 }
 
-/* ====== Heading (Optional) ====== */
 .form-container h2 {
   color: #00ffc6;
   font-size: 26px;
@@ -42,7 +38,6 @@ body {
   text-transform: uppercase;
 }
 
-/* ====== Inputs ====== */
 .form-container input {
   padding: 15px;
   font-size: 16px;
@@ -60,7 +55,6 @@ body {
   transform: scale(1.02);
 }
 
-/* ====== Button ====== */
 .form-container button {
   padding: 15px;
   font-size: 17px;
@@ -68,91 +62,53 @@ body {
   color: #000;
   background: linear-gradient(90deg, #00ffc6, #00bfff);
   border: none;
-  margin-top: 20px;
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.view{
-  width: 100%;
-}
+
 .form-container button:hover {
   box-shadow: 0 0 20px #00ffc6;
-  transform: translateY(0px) scale(1.03);
+  transform: scale(1.03);
 }
 
 .form-container button:active {
   transform: scale(0.98);
 }
 
-/* ====== Animation ====== */
-@keyframes slideUp {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ====== Responsive ====== */
-@media (max-width: 600px) {
-  .form-container {
-    width: 100%;
-    /* padding: 30px 20px; */
-  }
-
-  .form-container h2 {
-    font-size: 22px;
-  }
-
-  .form-container input,
-  .form-container button {
-    font-size: 20px;
-    padding: 12px;
-  }
-}
-body {
-  font-family: "Poppins", sans-serif;
-  padding: 0;
-  margin: 0;
-}
-
-/* ===== Flex Container ===== */
+/* ===== Product Container (Flex) ===== */
 .product-container {
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
-  justify-content: center; /* center the row */
+  justify-content: center;
   padding: 20px;
-  min-height: auto;
+  width: 100%;
+  margin: 20px auto;
 }
 
 /* ===== Product Card ===== */
 .product-card {
-  background-color: #1a1a1a; /* dark card background */
+  background-color: #1a1a1a;
   border-radius: 15px;
   overflow: hidden;
-  width: 300px; /* increased width */
+  width: 300px;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .product-card:hover {
   transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 255, 200, 0.4);
 }
 
-/* ===== Product Image ===== */
 .product-card img {
   width: 100%;
-  height: 220px; /* increased height */
+  height: 220px;
   object-fit: cover;
   display: block;
   border-bottom: 2px solid #00ffc6;
 }
 
-/* ===== Product Info ===== */
 .product-info {
   padding: 20px;
   text-align: center;
@@ -161,27 +117,27 @@ body {
 .product-info h1 {
   font-size: 1.4rem;
   margin-bottom: 10px;
-  color: rgb(130, 228, 197); /* highlight color */
+  color: #00ffc6;
 }
 
 .product-info p {
   font-size: 1rem;
   color: #ccc;
   margin-bottom: 12px;
-  height: 60px; /* adjust description height */
+  height: 60px;
   overflow: hidden;
 }
 
 .product-info span {
   font-weight: bold;
-  color: #00bfff; /* price color */
+  color: #00bfff;
   font-size: 1.2rem;
 }
 
 /* ===== Responsive ===== */
 @media (max-width: 1024px) {
   .product-card {
-    width: 45%; /* two cards per row */
+    width: 45%;
   }
   .product-card img {
     height: 200px;
@@ -190,18 +146,22 @@ body {
 
 @media (max-width: 768px) {
   .product-card {
-    width: 60%; /* one or two per row */
+    width: 70%;
   }
   .product-card img {
     height: 180px;
+  }
+  .form-container {
+    max-width: 400px;
   }
 }
 
 @media (max-width: 480px) {
   .product-card {
-    width: 90%; /* single card per row */
+    width: 100%;
   }
   .product-card img {
     height: 160px;
   }
+
 }
