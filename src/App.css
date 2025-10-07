@@ -66,7 +66,9 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-
+.view{
+  width: 100%;
+}
 .form-container button:hover {
   box-shadow: 0 0 20px #00ffc6;
   transform: scale(1.03);
