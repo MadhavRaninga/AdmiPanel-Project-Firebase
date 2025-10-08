@@ -19,7 +19,7 @@ let [imgUrl, setImgUrl] = useState("")
         console.log("Document written with ID: ", docRef.id);
       }
       else {
-        alert("Please Enter Student Data !")
+        alert("Please Enter Product Data !")
       }
     } catch (e) {
       console.error("Error adding document: ", e);
@@ -31,13 +31,15 @@ let [imgUrl, setImgUrl] = useState("")
   })
 
   return (
-    <div className="form-container">
-      <input type="text" placeholder='Product ImageUrl' onChange={(e) => setImgUrl(e.target.value)} value={imgUrl} />
-      <input type="text" placeholder='Product Title' onChange={(e) => setTitle(e.target.value)} value={title} />
-      <input type="text" placeholder='Product Description' onChange={(e) => setDescription(e.target.value)} value={description} />
-      <input type="text" placeholder='Product Price' onChange={(e) => setPrice(e.target.value)} value={price} />
-      <button onClick={handleAdd}>Add</button>
-      <Link to={'/product'}><button className='view'>View Product</button></Link>
+    <div className="main">
+      <div className="form-container">
+        <input type="text" placeholder='Product ImageUrl' onChange={(e) => setImgUrl(e.target.value)} value={imgUrl} />
+        <input type="text" placeholder='Product Title' onChange={(e) => setTitle(e.target.value)} value={title} />
+        <input type="text" placeholder='Product Description' onChange={(e) => setDescription(e.target.value)} value={description} />
+        <input type="text" placeholder='Product Price' onChange={(e) => setPrice(e.target.value)} value={price} />
+        <button onClick={handleAdd}>Add</button>
+        <Link to={'/product'}><button className='view'>View Product</button></Link>
+      </div>
     </div>
   );
 }

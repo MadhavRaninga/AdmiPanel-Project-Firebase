@@ -28,9 +28,7 @@ const Product = () => {
     </div>
   ))}
 <div className="back-button-container">
-  <Link to={'/'}>
-    <button className="back-button">Back To Home</button>
-  </Link>
+  <Link to={'/'}><button className="back-button">Back To Home</button></Link>
 </div>
 </div>
 
