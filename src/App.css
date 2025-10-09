@@ -348,6 +348,24 @@ body {
     font-size: 1rem;
   }
 }
+
+/* Login redirect */
+.login-redirect {
+  font-size: 14px;
+  margin-top: 15px;
+  color: #555;
+}
+
+.login-link {
+  color: #007bff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
 /* Divider between normal login and Google */
 .divider {
   display: flex;
